@@ -1,0 +1,3 @@
+#!/bin/bash -e
+
+git rev-parse --abbrev-ref HEAD | gsed -r 's:^([A-Z]+-[0-9]+).*:\1:'

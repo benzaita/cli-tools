@@ -1,0 +1,10 @@
+#!/bin/bash
+
+numOfTimes=$1
+
+shift
+
+for i in $(seq 1 $numOfTimes); do
+  "$@"
+done
+

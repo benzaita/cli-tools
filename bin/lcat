@@ -1,0 +1,11 @@
+#!/bin/bash
+
+declare -a args
+
+args=(
+  $(echo "$@" | awk -F ':' '{print $1}')
+  $(echo "$@" | awk -F ':' '{print $2}')
+)
+
+exec cat -n ${args[0]} | grep -C5 '^\s*'${args[1]}
+

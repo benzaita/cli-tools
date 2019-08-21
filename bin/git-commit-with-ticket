@@ -1,0 +1,4 @@
+#!/bin/bash -e
+
+ticketId=$(get-ticket-from-branch)
+git commit -m $ticketId\ "$@"
